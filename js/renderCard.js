@@ -17,6 +17,12 @@ const renderCard = async (data) => {
 	            >
 	        </a>
 		`
+
+		if (vote_average === 0) {
+			const link = card.querySelector('.other-films__link')
+			link.removeAttribute('data-rating')
+		}
+
         listCard.append(card)
         return card
     })
